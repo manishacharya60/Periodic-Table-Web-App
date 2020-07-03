@@ -1,0 +1,106 @@
+{%extends 'entry/base.html'%}{%block content%}
+<div id="particles-js"></div>
+  <div class="cotainer-section">
+    <div class="row">
+      <div class="col s12 m10 offset-m1 l10 offset-l1">
+        <ul class="collapsible expandable" style="background-color: #232526;">
+          <li>
+            <div
+              class="collapsible-header white-text"
+              style="background-color: #232526;"
+            >
+              <i class="material-icons" style="color: #fff;">info</i>Info!
+              (Click here...)
+            </div>
+            <div class="collapsible-body">
+              <div class="row">
+                <span
+                  ><div class="col s4 m3 l2">
+                    <p class="category" style="color: #ffc107;">Non-metal</p>
+                  </div>
+                  <div class="col s4 m3 l2">
+                    <p class="category" style="color: #ef5350;">Alkali-Metal</p>
+                  </div>
+                  <div class="col s4 m3 l2">
+                    <p class="category" style="color: #1e88e5;">
+                      Alkaline-Earth-Metal
+                    </p>
+                  </div>
+                  <div class="col s4 m3 l2">
+                    <p class="category" style="color: #e65100;">
+                      Transition-Metal
+                    </p>
+                  </div>
+                  <div class="col s4 m3 l2">
+                    <p class="category" style="color: #ffd740;">Lanthanoid</p>
+                  </div>
+                  <div class="col s4 m3 l2">
+                    <p class="category" style="color: #2e7d32;">Actinoid</p>
+                  </div>
+                  <div class="col s4 m3 l2">
+                    <p class="category" style="color: #e0e0e0;">
+                      Superactinoid
+                    </p>
+                  </div>
+                  <div class="col s4 m3 l2">
+                    <p class="category" style="color: #004d40;">
+                      Post-Transition-Metal
+                    </p>
+                  </div>
+                  <div class="col s4 m3 l2">
+                    <p class="category" style="color: #f50057;">Metalloid</p>
+                  </div>
+                  <div class="col s4 m3 l2">
+                    <p class="category" style="color: #827717;">Halogen</p>
+                  </div>
+                  <div class="col s4 m3 l2">
+                    <p class="category" style="color: #311b92;">Noble-Gas</p>
+                  </div></span
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-section">
+    <div class="row">
+      {%for post in posts%}
+      <div class="col s4 m3 l2">
+        <div class="card-panel elements" style="background: #232526;">
+          <a
+            href="{%url 'post-detail' post.id%}"
+            style="font-family: ubuntu; color: #fff; font-weight: bolder;"
+            >{{post.name}} ({{post.symbol}})</a
+          >
+          {%if post.category == 'Non-metal'%}
+          <div class="band band-n"></div>
+          {%elif post.category == 'Alkali-Metal'%}
+          <div class="band band-am"></div>
+          {%elif post.category == 'Alkaline-Earth-Metal'%}
+          <div class="band band-aem"></div>
+          {%elif post.category == 'Transition-Metal'%}
+          <div class="band band-t"></div>
+          {%elif post.category == 'Lanthanoid'%}
+          <div class="band band-l"></div>
+          {%elif post.category == 'Actinoid'%}
+          <div class="band band-a"></div>
+          {%elif post.category == 'Superactinoid'%}
+          <div class="band band-sa"></div>
+          {%elif post.category == 'Post-Transition-Metal'%}
+          <div class="band band-pt"></div>
+          {%elif post.category == 'Mettaloid'%}
+          <div class="band band-ml"></div>
+          {%elif post.category == 'Halogen'%}
+          <div class="band band-h"></div>
+          {%elif post.category == 'Noble-Gas'%}
+          <div class="band band-ng"></div>
+          {%endif%}
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+  {%endblock%}
+</div>

@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #232526; /* fallback for old browsers */
+}
+
+.brand-logo {
+  font-family: "Lato", sans-serif;
+  font-size: 3em;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+
+.nav-wrapper li a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.3em;
+}
+
+.display_form {
+  margin-top: 2rem;
+}
+
+.card .card-title {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+  color: #000;
+}
+
+.card .card-content p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.3em;
+  color: black;
+  position: relative;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+footer {
+  flex: 1 0 auto;
+}
+
+.page-footer,
+.footer-copyright {
+  font-family: ubuntu;
+  font-weight: bold;
+}
+
+.brand-logo {
+  font-size: 1.3em;
+}
+
+.card-panel {
+  font-family: lato;
+  font-size: 15px;
+  position: relative;
+}
+
+.band {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+}
+
+.strip {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+}
+
+.category {
+  font-weight: bold;
+}
+
+.band-n {
+  background-color: #ffc107;
+}
+
+.band-am {
+  background-color: #ef5350;
+}
+
+.band-aem {
+  background-color: #1e88e5;
+}
+
+.band-t {
+  background-color: #e65100;
+}
+
+.band-l {
+  background-color: #ffd740;
+}
+
+.band-a {
+  background-color: #2e7d32;
+}
+
+.band-sa {
+  background-color: #e0e0e0;
+}
+
+.band-pt {
+  background-color: #004d40;
+}
+
+.band-ml {
+  background-color: #f50057;
+}
+
+.band-h {
+  background-color: #827717;
+}
+
+.band-ng {
+  background-color: #311b92;
+}
+
+.user-heading {
+  font-family: "lato";
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.user-image {
+  margin-top: 1em;
+}
+
+.message-card {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+}
+
+.element_heading {
+  font-size: 1.3em;
+  color: #fff;
+  font-weight: bolder;
+  text-align: center;
+  font-family: lato;
+}
+
+.sub-title {
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  font-family: lato;
+}
+
+.tags {
+  font-family: "lato";
+  color: #e0e0e0;
+  font-weight: bolder;
+}
+
+.detail {
+  color: #fff;
+  font-family: ubuntu;
+}
+
+.closure {
+  transform: translateY(-100vh);
+}
+
+.sub-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+  color: #000;
+}
+
+.divider {
+  margin-top: 1em;
+}
+
+.disabled {
+  background-color: gray;
+}
+
+.down-section {
+  margin-top: 1em;
+  font-family: "lato";
+  font-size: 1.3em;
+}
+
+.down-section a {
+  font-weight: bold;
+  color: #f7971e;
+}
+
+.logout_msg {
+  position: absolute;
+  bottom: 3em;
+  right: 10px;
+  width: 250px;
+  height: 75px;
+  border-radius: 5px;
+  color: aqua;
+  font-family: ubuntu;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 3px;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}

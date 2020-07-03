@@ -1,0 +1,234 @@
+{%extends 'entry/base.html'%}{%block content%}
+<div id="particles-js"></div>
+<div class="container-section detail">
+  <div class="row">
+    <div class="col s12 m10 offset-m1 l6 offset-l3">
+      <div class="card-panel z-depth-1" style="background: #232526;">
+        <!-- styling for type -->
+        {%if object.category == 'Non-metal'%}
+        <div class="strip band-n"></div>
+        {%elif object.category == 'Alkali-Metal'%}
+        <div class="strip band-am"></div>
+        {%elif object.category == 'Alkaline-Earth-Metal'%}
+        <div class="strip band-aem"></div>
+        {%elif object.category == 'Transition-Metal'%}
+        <div class="strip band-t"></div>
+        {%elif object.category == 'Lanthanoid'%}
+        <div class="strip band-l"></div>
+        {%elif object.category == 'Actinoid'%}
+        <div class="strip band-a"></div>
+        {%elif object.category == 'Superactinoid'%}
+        <div class="strip band-sa"></div>
+        {%elif object.category == 'Post-Transition-Metal'%}
+        <div class="strip band-pt"></div>
+        {%elif object.category == 'Mettaloid'%}
+        <div class="strip band-ml"></div>
+        {%elif object.category == 'Halogen'%}
+        <div class="strip band-h"></div>
+        {%elif object.category == 'Noble-Gas'%}
+        <div class="strip band-ng"></div>
+        {%endif%}
+
+        <div class="element_heading" style="font-family: lato;">
+          {{object.name}}
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="sub-title" style="margin-top: 1em;">
+          <span class="material-icons" style="font-size: 20px;">
+            edit
+          </span>
+          Overview
+        </div>
+        <div class="divider"></div>
+        <p style="text-align: justify;">{{object.description}}</p>
+        <p style="margin-top: 10px;">
+          <span class="tags">Symbol:</span> {{object.symbol}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Latin Name:</span> {{object.latin_name}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">English Name:</span> {{object.english_name}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Type:</span> {{object.category}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Year Discovered:</span> {{object.year}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Discovered by:</span> {{object.discovered}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Electron Shell:</span>
+          {{object.electron_shell}}<br />
+        </p>
+
+        <table style="margin-top: 10px;">
+          <thead>
+            <tr>
+              <th>Electrons</th>
+              <th>Protons</th>
+              <th>Neutrons</th>
+            </tr>
+          </thead>
+
+          <tr style="text-align: center;">
+            <td>{{object.electrons}}</td>
+            <td>{{object.protons}}</td>
+            <td>{{object.neutrons}}</td>
+          </tr>
+        </table>
+
+        <div class="divider"></div>
+
+        <div class="sub-title" style="margin-top: 1em;">
+          <span class="material-icons" style="font-size: 20px;">
+            sort
+          </span>
+          Properties
+        </div>
+        <div class="divider"></div>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Atomic Number:</span>
+          {{object.atomic_number}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Atomic Weight(Relative atomic mass): </span>
+          {{object.atomic_weight}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Density(g/cm<sup>3</sup>): </sup></span>
+          {{object.density}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Melting Point:</span>
+          {{object.melting}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Boiling Point:</span>
+          {{object.boiling}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Valence Electron:</span>
+          {{object.valence_electron}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Period:</span>
+          {{object.period}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Group:</span>
+          {{object.group}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Block:</span>
+          {{object.block}}<br />
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="sub-title" style="margin-top: 1em;">
+          <span class="material-icons" style="font-size: 20px;">
+            science
+          </span>
+          Atomic Properties
+        </div>
+        <div class="divider"></div>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Electron Configuration:</span>
+          {{object.electron_config}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Oxidation State:</span>
+          {{object.oxidation_state}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Atomic Radius:</span>
+          {{object.atomic_radius}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Covalent Radius:</span>
+          {{object.covalent_radius}}<br />
+        </p>
+        
+        <p style="margin-top: 10px;">
+          <span class="tags">Vander wall Radius:</span>
+          {{object.vander_radius}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Crystal Structure:</span>
+          {{object.crystal_str}}<br />
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="sub-title" style="margin-top: 1em;">
+          <span class="material-icons" style="font-size: 20px;">
+            science
+          </span>
+          Reactivity
+        </div>
+        <div class="divider"></div>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Electronegativity:</span>
+          {{object.electronegativity}}<br />
+        </p>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Electron Affinity:</span>
+          {{object.electroaffinity}}<br />
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="sub-title" style="margin-top: 1em;">
+          <span class="material-icons" style="font-size: 20px;">
+            wifi_tethering
+          </span>
+          Electromagnetic Properties
+        </div>
+        <div class="divider"></div>
+
+        <p style="margin-top: 10px;">
+          <span class="tags">Magnetic Type:</span>
+          {{object.magnetic_type}}<br />
+        </p>
+        
+        <p style="margin-top: 10px;">
+          <span class="tags">Resistivity:</span>
+          {{object.resistivity}}<br />
+        </p>
+        
+        <p style="margin-top: 10px;">
+          <span class="tags">Superconducting Point:</span>
+          {{object.superconducting_point}}<br>
+        </p>      
+    </div>
+    </div>
+  </div>
+</div>
+{%endblock%}
